@@ -11,6 +11,6 @@ The application uses Riot Games' Data Dragon for item information.
 
 ## Filtering Criteria
 Items are excluded if they:
-- Are not purchasable.
+- Are not purchasable or have a base price of 0.
 - Include tags such as `Jungle`, `Consumable`, `Vision`, `Trinket`, `Lane`, or `Boots`.
 - Have properties like `specialRecipe`, `into`, `consumed`, `consumeOnFull`, or `hideFromAll`.

@@ -7,6 +7,7 @@ function App() {
     const item = itemData.data[key];
     return (
       item.gold.purchasable &&
+      item.gold.base > 0 &&
       !item.hasOwnProperty('specialRecipe') &&
       !item.hasOwnProperty('into') &&
       !item.hasOwnProperty('consumed') &&
@@ -21,7 +22,9 @@ function App() {
     );
   });
 
-  const [generatedItem, setGeneratedItem] = useState('');
+  console.log(itemIds);
+
+  const [, setGeneratedItem] = useState('');
   const [generatedItemName, setGeneratedItemName] = useState('');
   const [logo, setLogo] = useState('');
 
