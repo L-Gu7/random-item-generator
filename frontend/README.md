@@ -1,16 +1,37 @@
-# LOL Item Generator
+# LOL Item Generator (Frontend)
 
-A simple web application that generates random purchasable items from the game League of Legends. The app fetches item data from Riot Games' Data Dragon API and displays the item's name and image.
+This folder contains the frontend implementation of the LOL Item Generator, a React-based web application that generates random purchasable items from League of Legends.
 
-## Data Source
-The application uses Riot Games' Data Dragon for item information.
+## Deployment
+This project is configured for deployment on **GitHub Pages**.
 
-- **Reference Documentation**: [Riot Games Data Dragon API](https://developer.riotgames.com/docs/lol#data-dragon_items)
-- **Game Version**: 15.1.1
-- **Default Item Language**: Chinese
+### Steps to Deploy
+1. Build the project:
+   ```bash
+   npm run build
+   ```
+2. Deploy to GitHub Pages:
+   ```bash
+   npm run deploy
+   ```
+   This command will automatically push the build files to the `gh-pages` branch and make the app accessible via GitHub Pages.
 
-## Filtering Criteria
-Items are excluded if they:
-- Are not purchasable.
-- Include tags such as `Jungle`, `Consumable`, `Vision`, `Trinket`, `Lane`, or `Boots`.
-- Have properties like `specialRecipe`, `into`, `consumed`, `consumeOnFull`, or `hideFromAll`.
+### Prerequisites for Deployment
+- Ensure the `homepage` field in `package.json` is set to:
+  ```json
+  "homepage": "https://<your-username>.github.io/<repo-name>"
+  ```
+  Replace `<your-username>` and `<repo-name>` with your GitHub details.
+
+- Ensure you have a valid GitHub Personal Access Token for authentication if required.
+
+## Local Development
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Run the development server:
+   ```bash
+   npm start
+   ```
+   Open `http://localhost:3000` in your browser to view the app locally.
